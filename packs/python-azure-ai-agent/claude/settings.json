@@ -1,0 +1,30 @@
+{
+  "project": {
+    "name": "python-azure-ai-agent",
+    "description": "Python AI agents on Azure AI Foundry"
+  },
+  "review": {
+    "enabled": true,
+    "dimensions": [
+      "correctness",
+      "readability",
+      "architecture",
+      "python-patterns",
+      "security",
+      "ai-security",
+      "azure-ai-foundry",
+      "agent-framework",
+      "dependencies",
+      "performance",
+      "operations",
+      "tests",
+      "documentation"
+    ]
+  },
+  "ai_security": {
+    "check_prompt_injection": true,
+    "check_tool_safety": true,
+    "check_data_leakage": true,
+    "check_agent_bounds": true
+  }
+}

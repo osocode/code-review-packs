@@ -1,0 +1,65 @@
+# Code Review Framework for Python AI Agents
+
+## Context
+
+This project builds Python AI agents on Azure AI Foundry using the Microsoft Agent Framework.
+
+## Code Review Guidelines
+
+When reviewing code or assisting with code changes, apply these review dimensions:
+
+### Security (Highest Priority)
+- Validate all user input before use
+- Never pass user input directly to system prompts
+- Use Managed Identity, not API keys
+- Keep secrets in Key Vault
+- Sanitize logs and error messages
+
+### AI Safety
+- Bound agent capabilities and loop iterations
+- Validate tool parameters before execution
+- Filter PII from model inputs/outputs
+- Configure content safety filters
+- Test for prompt injection resistance
+
+### Python Best Practices
+- Use type hints for public interfaces
+- Prefer async for I/O operations
+- Use Pydantic for data validation
+- Follow PEP 8 style guidelines
+- Handle errors with specific exceptions
+
+### Architecture
+- Clear separation of concerns
+- Dependencies point inward
+- Explicit interfaces between components
+- Configuration externalized
+
+### Testing
+- Unit tests with mocked AI responses
+- Integration tests for critical paths
+- Edge case coverage
+- Async test patterns
+
+### Documentation
+- Update README/docs when APIs change
+- Document new features and commands
+- Keep examples accurate after code changes
+- Update changelog for user-facing changes
+
+## Finding Format
+
+When identifying issues, use:
+
+```
+**[Dimension]** - `file:line`
+Issue description.
+**Suggestion:** Specific fix.
+```
+
+## Severity Levels
+
+- **Critical**: Security vulnerabilities, data loss risks
+- **Major**: Bugs, missing error handling
+- **Minor**: Style, minor improvements
+- **Info**: Suggestions

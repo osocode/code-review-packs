@@ -1,0 +1,45 @@
+pack:
+  name: python-azure-ai-agent
+  description: "Code review pack for Python AI agents on Azure AI Foundry using Microsoft Agent Framework"
+  version: 0.0.1
+
+  profile:
+    primary_language: python
+    python_version: ">=3.10"
+    ai_platform: azure-ai-foundry
+    agent_framework: microsoft-agent-framework
+    web_frameworks:
+      - fastapi
+      - flask
+    iac_options:
+      - terraform
+      - bicep
+    cloud_provider: azure
+
+  supported_tools:
+    - windsurf
+    - cursor
+    - claude-code
+    - claude-desktop
+    - github-actions
+
+  dimensions:
+    - correctness
+    - readability
+    - architecture
+    - python-patterns
+    - security
+    - ai-security
+    - azure-ai-foundry
+    - agent-framework
+    - dependencies
+    - performance
+    - operations
+    - tests
+    - documentation
+
+  review_settings:
+    ai_provider: anthropic
+    model: claude-opus-4-5-20250514
+    max_tokens: 8192
+    temperature: 0.2
